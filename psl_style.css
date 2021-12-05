@@ -1,0 +1,866 @@
+* {
+    outline: none !important;
+    webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    overflow: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    min-height: auto !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome Safari */
+}
+
+.wd_ful {
+    float: left;
+    width: 100%;
+}
+
+.box_half_psl {
+    float: left;
+    width: 50%;
+    max-width: 400px;
+}
+
+.box_psl {
+    float: left;
+    width: 100%;
+    padding: 15px;
+}
+
+.psl_logo_bar {
+    float: left;
+    width: 100%;
+}
+
+.psl_logo {
+    float: left;
+    width: 15%;
+    max-width: 120px;
+}
+
+.close_btn_psl {
+    float: right;
+}
+
+.tab_btn_psl {
+    border-bottom: solid 2px #040404;
+    text-transform: uppercase;
+}
+
+.tab_btn_psl li.uk-active a:before {
+    background-color: #8FC31F;
+}
+
+.tab_btn_psl li {
+    margin-bottom: -2px;
+}
+
+.psl_box {
+    float: left;
+    width: 100%;
+    border-bottom: solid 1px rgba(215, 179, 96, 0.5);
+    padding: 15px 0;
+}
+
+.teams {
+    float: left;
+    width: 95px;
+}
+
+.match_time {
+    float: left;
+    width: calc(100% - 165px);
+}
+
+.team_l {
+    text-align: left;
+}
+
+.team_r {
+    text-align: right;
+    float: right;
+    width: 70px;
+}
+
+.match_count {
+    float: left;
+    width: 20px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    color: #D7B360;
+    font-size: 13px;
+    margin-right: 5px;
+}
+
+.psl_team_img {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border: solid 2px #D9B568;
+    overflow: hidden;
+    border-radius: 100%;
+    margin-right: 10px;
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 10px 5px 0;
+    background-position: center;
+}
+
+.psl_team_img:before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: '';
+    width: 100%;
+    height: 100%;
+}
+
+.psl_team_img img {
+    position: relative;
+}
+
+.psl_team_img.karachi:before {
+    background-color: rgba(0, 38, 186, 0.6);
+}
+
+.psl_team_img.lahore:before {
+    background-color: rgba(196, 216, 46, 0.6);
+}
+
+.psl_team_img.islamabad:before {
+    background-color: rgba(237, 28, 36, 0.6);
+}
+
+.psl_team_img.multan:before {
+    background-color: rgba(32, 163, 5, 0.6);
+}
+
+.psl_team_img.peshawar:before {
+    background-color: rgba(255, 194, 14, 0.6);
+}
+
+.psl_team_img.quetta:before {
+    background-color: rgba(33, 22, 70, 0.6);
+}
+
+.psl_team_img.karachi {
+    background: #0026ba;
+}
+
+.psl_team_img.lahore {
+    background: #c4d82e;
+}
+
+.psl_team_img.islamabad {
+    background: #ed1c24;
+}
+
+.psl_team_img.multan {
+    background: #20a305;
+}
+
+.psl_team_img.peshawar {
+    background: #ffc20e;
+}
+
+.psl_team_img.quetta {
+    background: #211646;
+}
+
+
+/*.psl_team_img.tbd {
+	background-image: url(../images/psl/tbc.png);
+}*/
+
+.team_r .psl_team_img {
+    float: right;
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.teams .team_name_desktop {
+    color: #fff;
+    font-size: 20px;
+    margin: 15px 0 5px;
+}
+
+.teams .team_name_mob {
+    color: #fff;
+    font-size: 20px;
+    margin: 15px 0 5px;
+    display: none;
+}
+
+.match_name {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #8FC31F;
+    margin: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.match_number {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: #fff;
+    margin: 0px;
+    line-height: 22px;
+}
+
+.match_date_time {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    color: #fff;
+    margin: 0px;
+    line-height: 22px;
+    font-weight: bold;
+    position: relative;
+}
+
+.match_place {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    color: #fff;
+    margin: 0px;
+    line-height: 22px;
+    font-weight: bold;
+    position: relative;
+}
+
+.match_date_time span,
+.match_place span {
+    font-size: 14px;
+    position: relative;
+}
+
+.match_date_time.win_match span:before {
+    position: absolute;
+    background-color: #006E1A;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 30px;
+    height: 14px;
+    font-size: 9px;
+    content: 'win';
+    line-height: 14px;
+    left: -40px;
+    top: 2px;
+}
+
+.match_place.win_match span:before {
+    position: absolute;
+    background-color: #006E1A;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    width: 30px;
+    height: 14px;
+    font-size: 9px;
+    content: 'win';
+    line-height: 14px;
+    right: -95px;
+    top: 3px;
+}
+
+.match_date_time .live_span {
+    width: 42px;
+    height: 15px;
+    float: none;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.match_date_time .live_span:before {
+    left: 4px;
+    top: 5px;
+    width: 4px;
+    height: 4px;
+}
+
+.psl_table table img {
+    width: 100%;
+}
+
+.psl_table table {
+    color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.psl_table table th {
+    color: #8FC31F;
+    font-weight: bold;
+}
+
+.psl_table table th:first-child {
+    width: 40%;
+}
+
+.psl_table table th {
+    width: 10%;
+}
+
+.psl_table table th,
+.psl_table table td {
+    padding: 10px 0;
+}
+
+.psl_table table tbody tr {
+    border-top: solid 1px rgba(215, 179, 96, 0.5);
+}
+
+.tbl_txt {
+    float: left;
+    width: 100px;
+    margin: 0 0 0;
+    line-height: 16px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #8FC31F;
+    padding: 4px 0 0 10px;
+    text-align: left;
+}
+
+.tbl_txt span {
+    float: left;
+    width: 100px;
+    color: #fff;
+}
+
+.tbl_img {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border: solid 2px #D9B568;
+    overflow: hidden;
+    border-radius: 100%;
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 4px 2px 0;
+    background-position: center;
+}
+
+.team_box {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+
+.team_box img {
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+.team_box:hover img {
+    transform: scale(1.2);
+}
+
+.psl_sec .headng_box img {
+    max-width: 50px;
+}
+
+.teams_psl_sec {
+    float: left;
+    width: 100%;
+}
+
+.teams_psl {
+    float: left;
+    margin: 15px 0;
+    width: 50%;
+}
+
+.teams_psl_img_ring {
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 80px;
+    padding: 3px;
+    /*padding: 10px;*/
+    margin-right: 7px;
+}
+
+.teams_psl_img_ring:before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, #cd9339 0%, #faecc6 5%, #cd9339 15%, #faecc6 50%, #cd9339 100%);
+    border-radius: 100%;
+    animation-duration: 3s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.teams_psl_img {
+    float: left;
+    width: 100%;
+    height: 100%;
+    /*border: solid 2px #D9B568;*/
+    overflow: hidden;
+    border-radius: 100%;
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 10px 5px 0;
+    background-position: center;
+}
+
+.teams_psl_txt {
+    width: calc(100% - 90px);
+    float: left;
+    text-align: left;
+    margin: 20px 0 0;
+    font-size: 15px;
+    line-height: 16px;
+    color: #8FC31F;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.teams_psl_txt span {
+    color: #fff;
+    float: left;
+    width: 100%;
+}
+
+.teams_psl_img:before {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.teams_psl_img img {
+    position: relative;
+}
+
+.teams_psl_img.karachi:before {
+    background-color: rgba(0, 38, 186, 0.6);
+}
+
+.teams_psl_img.lahore:before {
+    background-color: rgba(196, 216, 46, 0.6);
+}
+
+.teams_psl_img.islamabad:before {
+    background-color: rgba(237, 28, 36, 0.6);
+}
+
+.teams_psl_img.multan:before {
+    background-color: rgba(32, 163, 5, 0.6);
+}
+
+.teams_psl_img.peshawar:before {
+    background-color: rgba(255, 194, 14, 0.6);
+}
+
+.teams_psl_img.quetta:before {
+    background-color: rgba(33, 22, 70, 0.6);
+}
+
+.teams_psl_img.karachi {
+    background: #0026ba;
+}
+
+.teams_psl_img.lahore {
+    background: #c4d82e
+}
+
+.teams_psl_img.islamabad {
+    background: #ed1c24;
+}
+
+.teams_psl_img.multan {
+    background: #20a305;
+}
+
+.teams_psl_img.peshawar {
+    background: #ffc20e;
+}
+
+.teams_psl_img.quetta {
+    background: #211646;
+}
+
+.btm_bdr {
+    border-bottom: solid 2px #040404;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.btm_bdr .pslback_btn {
+    float: left;
+    color: #85858B;
+    text-decoration: none;
+}
+
+.btm_bdr .pslback_btn:hover {
+    color: #fff;
+}
+
+.btm_bdr h2 {
+    color: #D7B360;
+    display: inline-block;
+    margin: 0 0;
+    font-size: 18px;
+}
+
+.psl_player_box {
+    float: left;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.psl_player_img {
+    float: left;
+    width: 100%;
+    border: solid 2px #D9B568;
+    overflow: hidden;
+    border-radius: 100%;
+    position: relative;
+}
+
+.team_peshawar .psl_player_img {
+    background-color: #ffc20e;
+}
+
+.team_quetta .psl_player_img {
+    background-color: #211646;
+}
+
+.team_islamabad .psl_player_img {
+    background-color: #ed1c24;
+}
+
+.team_karachi .psl_player_img {
+    background-color: #0026ba;
+}
+
+.team_lahore .psl_player_img {
+    background-color: #c4d82e;
+}
+
+.team_multan .psl_player_img {
+    background-color: #20a305;
+}
+
+.psl_player_name {
+    float: left;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.psl_player_name h4 {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #D7B360;
+    margin: 0px;
+}
+
+.psl_player_name span {
+    float: left;
+    width: 100%;
+    color: #fff;
+}
+
+.psl_player_box:before {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 100%;
+    background-color: #D9B568;
+    position: absolute;
+    right: 10%;
+    top: 5%;
+    content: '';
+    z-index: 1;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.psl_player_box.alrounder:before {
+    background-image: url(../images/psl/alrounder.png);
+}
+
+.psl_player_box.bowler:before {
+    background-image: url(../images/psl/bowler.png);
+}
+
+.psl_player_box.batsman:before {
+    background-image: url(../images/psl/batsman.png);
+}
+
+.loader_style {
+    position: fixed;
+    width: 78px;
+    height: 49px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bubblingG {
+    text-align: center;
+    width: 78px;
+    height: 49px;
+    margin: auto;
+}
+
+.bubblingG span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin: 24px auto;
+    background: rgb(205, 146, 57);
+    border-radius: 49px;
+    -o-border-radius: 49px;
+    -ms-border-radius: 49px;
+    -webkit-border-radius: 49px;
+    -moz-border-radius: 49px;
+    animation: bubblingG 1.5s infinite alternate;
+    -o-animation: bubblingG 1.5s infinite alternate;
+    -ms-animation: bubblingG 1.5s infinite alternate;
+    -webkit-animation: bubblingG 1.5s infinite alternate;
+    -moz-animation: bubblingG 1.5s infinite alternate;
+}
+
+#bubblingG_1 {
+    animation-delay: 0s;
+    -o-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+}
+
+#bubblingG_2 {
+    animation-delay: 0.45s;
+    -o-animation-delay: 0.45s;
+    -ms-animation-delay: 0.45s;
+    -webkit-animation-delay: 0.45s;
+    -moz-animation-delay: 0.45s;
+}
+
+#bubblingG_3 {
+    animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    -ms-animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s;
+    -moz-animation-delay: 0.9s;
+}
+
+@keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color: rgb(215, 179, 96);
+        transform: translateY(0);
+    }
+    100% {
+        width: 23px;
+        height: 23px;
+        background-color: rgb(250, 236, 198);
+        transform: translateY(-20px);
+    }
+}
+
+@-o-keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color: rgb(215, 179, 96);
+        -o-transform: translateY(0);
+    }
+    100% {
+        width: 23px;
+        height: 23px;
+        background-color: rgb(250, 236, 198);
+        -o-transform: translateY(-20px);
+    }
+}
+
+@-ms-keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color: rgb(215, 179, 96);
+        -ms-transform: translateY(0);
+    }
+    100% {
+        width: 23px;
+        height: 23px;
+        background-color: rgb(250, 236, 198);
+        -ms-transform: translateY(-20px);
+    }
+}
+
+@-webkit-keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color: rgb(215, 179, 96);
+        -webkit-transform: translateY(0);
+    }
+    100% {
+        width: 23px;
+        height: 23px;
+        background-color: rgb(250, 236, 198);
+        -webkit-transform: translateY(-20px);
+    }
+}
+
+@-moz-keyframes bubblingG {
+    0% {
+        width: 10px;
+        height: 10px;
+        background-color: rgb(215, 179, 96);
+        -moz-transform: translateY(0);
+    }
+    100% {
+        width: 23px;
+        height: 23px;
+        background-color: rgb(250, 236, 198);
+        -moz-transform: translateY(-20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .psl_player_box:before {
+        right: 5%;
+        top: 2%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .psl_player_box:before {
+        right: 0%;
+        top: 2%;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .psl_player_box:before {
+        right: 0%;
+        top: 2%;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .box_psl {
+        padding: 10px;
+    }
+    .tab_btn_psl li a {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+    .teams_psl_img_ring {
+        width: 60px;
+        height: 60px;
+    }
+    .teams_psl_txt {
+        margin: 14px 0 0;
+        font-size: 12px;
+    }
+    .psl_team_img {
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+    .teams {
+        width: 70px;
+    }
+    .team_r {
+        width: 40px;
+    }
+    .match_time {
+        width: calc(100% - 115px);
+    }
+    .match_name {
+        font-size: 12px;
+    }
+    .match_date_time {
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .match_date_time span,
+    .match_place span {
+        font-size: 12px;
+    }
+    .match_place {
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .tbl_txt {
+        padding-left: 0px;
+        width: 100%;
+    }
+    .tbl_txt span {
+        width: 100%;
+    }
+    .team_list .uk-width-1-4 {
+        width: 33.3333%;
+    }
+    .btm_bdr h2 {
+        font-size: 15px;
+    }
+}
